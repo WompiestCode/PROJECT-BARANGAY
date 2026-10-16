@@ -1,0 +1,67 @@
+body {
+  font-family: 'Roboto', sans-serif;
+
+  margin: 0;
+  min-height: 100vh;
+  min-height: 100dvh;
+}
+
+h1, h2, h3, p {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+  padding: 0 50px;
+}
+
+header h2 {
+  color: rgb(0, 0, 0);
+}
+
+header .navbar {
+  display: flex;
+  gap: 50px;
+}
+
+header .nav-links {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+header .nav-links a {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+}
+
+#search {
+  appearance: none;
+  border: 1px solid black;
+  border-radius: 20px;
+  padding: 10px 20px;
+}
+
+.welcome {
+  height: 450px;
+  background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(img/background.jpg); /* change the background img here */
+  background-position: center;
+  color: white;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.content {
+  padding: 50px 13rem;
+}
