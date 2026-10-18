@@ -1,65 +1,174 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
-    rel="stylesheet">
-  <title>Document</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#f5f3ee">
+    <meta name="description"
+        content="Find community information and send an inquiry about local services, documents, and programs.">
+    <link rel="stylesheet" href="styles.css">
+    <title>Barangay Milagrosa || Inquiry Desk</title>
 </head>
+
 <body>
-  <header style="background-color: white"> <!-- this is for the header, yung pinaka taas. change nyo color if need -->
-    <h2>Barangay Portal</h2>
-    <nav class="navbar">
-      <ul class="nav-links">
-        <li><a href="#">Nav 1</a></li>
-        <li><a href="#">Nav 2</a></li>
-        <li><a href="#">Nav 3</a></li>
-        <!-- dagdagyan nyo to kung anong need na links sa header, or bawasan nyo -->
-      </ul>
-      <input type="text" name="search" id="search" placeholder="Search...">
-    </nav>
-  </header>
-  <div class="welcome">
-    <h1>Welcome to [website name]</h1>
-    <p>Description here</p>
-  </div>
-  <div class="content" style="background-color: rgb(241, 80, 80)"> <!-- change nyo background color placeholder lang toh -->
-    <h2>Content</h2>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat quam enim, voluptatem illo expedita placeat quas
-      consequatur odio aut corrupti ex nihil mollitia molestias. Labore, perferendis? Mollitia officiis incidunt eius
-      adipisci eum aliquam rem dolorum repudiandae velit praesentium laborum ipsam alias reiciendis animi in natus
-      soluta, sunt sapiente debitis doloremque corrupti at quisquam possimus. Eos commodi repellat a magni aliquam,
-      praesentium quaerat voluptate ea delectus nostrum omnis perspiciatis eum voluptatem alias distinctio sunt
-      voluptatibus nulla, recusandae doloremque in atque. Nobis eum quae odio voluptatibus doloribus excepturi pariatur
-      quibusdam omnis voluptas asperiores rem doloremque, facere aliquid aliquam deserunt nesciunt mollitia quia
-      accusantium sed enim quaerat est! Iure excepturi nisi sed odit nam quis architecto facilis similique illo commodi
-      provident officia id quaerat voluptatum impedit placeat labore voluptas libero distinctio laudantium tempora
-      voluptatibus, at veniam porro? Ducimus ab, cum facilis quibusdam perspiciatis possimus libero expedita voluptas
-      magnam necessitatibus aut, tenetur esse dolore odit minima similique, obcaecati rem illo doloremque velit quaerat
-      quod sapiente! Reprehenderit sunt sint excepturi ea totam temporibus delectus dicta consequuntur at rerum harum
-      similique, repellendus reiciendis earum architecto voluptatibus vitae possimus corporis voluptas ut. Illum natus
-      molestias modi quam, sapiente officia ab, temporibus consequatur neque provident minus veritatis in?</p>
-  </div>
-  <div class="content" style="background-color: rgb(80, 150, 241)"> <!-- change nyo background color placeholder lang toh -->
-    <h2>Content</h2>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem eius odit soluta unde mollitia pariatur, rem magni
-      dolores tenetur ipsa aperiam deserunt ducimus. Repellendus asperiores quas atque necessitatibus earum sed,
-      suscipit itaque, dolores voluptate vero, veniam id dolor incidunt! Delectus ducimus dicta sed est? Facilis ea
-      mollitia eligendi esse deleniti nesciunt, placeat fugit enim voluptatibus nam rerum quas architecto veritatis
-      praesentium minus nihil optio odit vero delectus odio error laborum voluptatem distinctio. Impedit possimus
-      obcaecati quam in nulla tenetur sunt eveniet, consequatur neque. Veritatis quasi deleniti quia, enim beatae natus
-      possimus quaerat ullam placeat voluptas iusto quas excepturi odio nam ad necessitatibus libero numquam inventore
-      explicabo! Praesentium voluptatibus ducimus tempore rem quaerat, architecto natus odit dolores rerum consectetur
-      nulla eaque, doloremque dolorum debitis minus omnis dolor facere esse quasi qui sit eius, odio tenetur
-      perferendis. Reprehenderit iusto dolorum beatae ea dolores. Ea architecto repudiandae aut, eligendi sint
-      laudantium maxime harum. Quas vero quae dolor eveniet commodi! Dolores laudantium beatae, quibusdam eligendi,
-      consectetur accusantium natus iure corrupti cumque explicabo consequuntur aut consequatur tenetur molestias,
-      reiciendis minima animi dolorum neque voluptatem alias velit cupiditate? Sapiente et nesciunt nulla nemo maxime
-      earum molestiae est sunt, perspiciatis voluptates voluptate doloribus culpa, hic, rerum ad!</p>
-  </div>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <header class="navbar" id="home">
+        <div class="header">
+            <a class="brand" href="#home" aria-label="Barangay Milagrosa Inquiry Desk home">
+                <span class="brand-mark" aria-hidden="true">B</span>
+                <span>BARANGAY<br>MILAGROSA</span>
+            </a>
+            <nav aria-label="Main navigation">
+                <ul>
+                    <li><a href="#home" aria-current="page">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#inquiry">Contact</a></li>
+                </ul>
+            </nav>
+            <button class="theme-toggle" type="button" aria-pressed="false">Use dark mode</button>
+        </div>
+        <div class="background">
+            <div class="hero-copy">
+                <p class="eyebrow">A helpful place for local residents</p>
+                <h1>Your community.<br>One place to ask.</h1>
+                <p>Find information about local services, community programs, and everyday concerns.</p>
+                <a class="button-link" href="#inquiry">Send an inquiry</a>
+            </div>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <section class="content" id="services" aria-labelledby="services-title">
+            <div class="menu-ctn">
+                <p class="eyebrow">How can we help?</p>
+                <h2 id="services-title">Community services</h2>
+                <p class="section-intro">Choose a topic to get started. Our inquiry desk can help point you in the
+                    right direction.</p>
+                <div class="showcase">
+                    <article class="thumb">
+                        <span class="card-icon" aria-hidden="true">01</span>
+                        <h3>Documents &amp; records</h3>
+                        <p>Ask about local documents, certificates, and where to request them.</p>
+                        <a href="#inquiry">Ask about documents</a>
+                    </article>
+                    <article class="thumb">
+                        <span class="card-icon" aria-hidden="true">02</span>
+                        <h3>Community concerns</h3>
+                        <p>Share a neighborhood concern or ask which office can assist you.</p>
+                        <a href="#inquiry">Share a concern</a>
+                    </article>
+                    <article class="thumb">
+                        <span class="card-icon" aria-hidden="true">03</span>
+                        <h3>Programs &amp; services</h3>
+                        <p>Find out where to ask about community programs and resident services.</p>
+                        <a href="#inquiry">Ask about services</a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="about" id="about" aria-labelledby="about-title">
+            <div class="about-ctn">
+                <img class="community-photo" src="./img/background.png"
+                    alt="Aerial view of a local community and its surrounding roads">
+                <div class="about-right">
+                    <p class="eyebrow">Here for our neighbors</p>
+                    <h2 id="about-title">Local information, made easier</h2>
+                    <p>This community inquiry desk is a simple starting point for residents looking for help. Tell us
+                        what you need, and we can guide you toward the appropriate local office or service.</p>
+                    <a class="button-link" href="#inquiry">Get in touch</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="visit" id="inquiry" aria-labelledby="inquiry-title">
+            <div class="visit-ctn">
+                <div class="visit-left">
+                    <p class="eyebrow">We are ready to listen</p>
+                    <h2 id="inquiry-title">Send an inquiry</h2>
+                    <p class="contact-note">Need in-person assistance? Visit your local community or municipal office
+                        during public hours. For emergencies, contact your local emergency service.</p>
+                    <p class="form-notice">This website preview does not send or store inquiries. Please contact your
+                        local office directly for assistance.</p>
+                </div>
+                <form class="inquiry-form">
+                    <div class="form-field">
+                        <label for="name">Your name</label>
+                        <input type="text" id="name" name="name" autocomplete="name" required>
+                    </div>
+                    <div class="form-field">
+                        <label for="email">Email address</label>
+                        <input type="email" id="email" name="email" autocomplete="email" required>
+                    </div>
+                    <div class="form-field">
+                        <label for="topic">What is your inquiry about?</label>
+                        <select id="topic" name="topic" required>
+                            <option value="" selected disabled>Select a topic</option>
+                            <option>Documents and records</option>
+                            <option>Community concern</option>
+                            <option>Programs and services</option>
+                            <option>Other</option>
+                        </select>
+                    </div>
+                    <div class="form-field">
+                        <label for="message">How can we help?</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button class="button-link submit-button" type="submit">Send inquiry</button>
+                    <p class="form-status" role="status" aria-live="polite"></p>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <a class="footer-brand" href="#home">Community Inquiry Desk</a>
+        <p>Local information and assistance for residents.</p>
+        <a href="#inquiry">Contact the inquiry desk</a>
+    </footer>
+
+    <script>
+        const themeToggle = document.querySelector(".theme-toggle");
+        const root = document.documentElement;
+        const inquiryForm = document.querySelector(".inquiry-form");
+        const formStatus = document.querySelector(".form-status");
+        const systemPrefersDark = window.matchMedia("(prefers-color-scheme: dark)");
+        const savedTheme = localStorage.getItem("community-theme");
+
+        if (savedTheme === "light" || savedTheme === "dark") {
+            root.dataset.theme = savedTheme;
+        }
+
+        function updateThemeToggle() {
+            const isDark = root.dataset.theme
+                ? root.dataset.theme === "dark"
+                : systemPrefersDark.matches;
+
+            themeToggle.textContent = isDark ? "Use light mode" : "Use dark mode";
+            themeToggle.setAttribute("aria-pressed", String(isDark));
+        }
+
+        updateThemeToggle();
+
+        themeToggle.addEventListener("click", function () {
+            const isDark = root.dataset.theme
+                ? root.dataset.theme === "dark"
+                : systemPrefersDark.matches;
+            const nextTheme = isDark ? "light" : "dark";
+
+            root.dataset.theme = nextTheme;
+            localStorage.setItem("community-theme", nextTheme);
+            updateThemeToggle();
+        });
+
+        inquiryForm.addEventListener("submit", function (event) {
+            event.preventDefault();
+            formStatus.textContent =
+                "This preview does not send inquiries. Please contact your local office directly.";
+        });
+    </script>
 </body>
+
 </html>

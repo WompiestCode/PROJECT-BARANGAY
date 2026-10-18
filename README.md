@@ -1,2 +1,0 @@
-# PROJECT-BARANGAY
-NSTP PROJECT: Website for Barangay
