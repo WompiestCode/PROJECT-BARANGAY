@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#f5f3ee">
+    <meta name="description" content="Private realtime conversations for registered community desk users.">
+    <link rel="stylesheet" href="styles.css">
+    <title>Messages | Barangay Milagrosa</title>
+</head>
+<body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <header class="page-header">
+        <div class="header">
+            <a class="brand" href="index.html" aria-label="Barangay Milagrosa home"><span class="brand-mark" aria-hidden="true">B</span><span>BARANGAY<br>MILAGROSA</span></a>
+            <nav aria-label="Main navigation"><ul>
+                <li><a href="index.html">Home</a></li><li><a href="services.html">Services</a></li>
+                <li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li>
+                <li><a href="messages.html" aria-current="page">Messages</a></li>
+            </ul></nav>
+            <div class="header-actions"><a class="account-link" href="login.html" data-account-link>Sign in</a><button class="theme-toggle" type="button" aria-label="Switch to dark theme" title="Switch theme"><span aria-hidden="true">☾</span></button></div>
+        </div>
+    </header>
+    <main id="main-content" class="page-main">
+        <section class="page-intro"><p class="eyebrow">Private conversations</p><h1>Messages</h1><p>Choose a registered user to start a private conversation. Only the conversation participants can read its messages.</p></section>
+        <section class="messages-layout" aria-label="Community messages">
+            <aside class="message-sidebar">
+                <h2>Your conversations</h2>
+                <div id="conversation-list" class="conversation-list" aria-live="polite"></div>
+                <h2>Start a conversation</h2>
+                <div id="directory-list" class="conversation-list"></div>
+            </aside>
+            <section class="chat-panel" aria-labelledby="chat-title">
+                <h2 id="chat-title">Select a person</h2>
+                <p id="chat-help" class="form-status" role="status" aria-live="polite">Sign in to view or start conversations.</p>
+                <ol id="message-list" class="message-list" aria-label="Conversation messages"></ol>
+                <form id="message-form" class="message-form" hidden>
+                    <label class="visually-hidden" for="message-text">Write a message</label>
+                    <textarea id="message-text" name="message" rows="2" maxlength="2000" placeholder="Write a message..." required></textarea>
+                    <button class="button-link" id="send-message" type="submit">Send</button>
+                </form>
+            </section>
+        </section>
+        <p class="safety-note">Do not share passwords, financial details, or other sensitive personal information in chat. This service is not for emergencies.</p>
+    </main>
+    <footer><a class="footer-brand" href="index.html">Barangay Milagrosa Community Desk</a><p>Local information and assistance for residents.</p><a href="contact.html">Contact the inquiry desk</a></footer>
+    <script src="theme.js"></script>
+    <script type="module" src="messages.js"></script>
+    <script type="module" src="account-nav.js"></script>
+</body>
+</html>
