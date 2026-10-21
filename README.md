@@ -18,3 +18,4 @@ The Firebase web configuration is public client configuration, not a service-acc
 
 Users can create accounts and privately message another registered user. Display names, but not email addresses, are visible in the signed-in user directory. This site does not implement staff verification, moderation, emergency response, or account recovery beyond Firebase's built-in authentication features.
 
+
