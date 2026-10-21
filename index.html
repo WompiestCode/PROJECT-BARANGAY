@@ -5,42 +5,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#f5f3ee">
-    <meta name="description"
-        content="Find community information and send an inquiry about local services, documents, and programs.">
+    <meta name="description" content="Find community information and connect with the Barangay Milagrosa inquiry desk.">
     <link rel="stylesheet" href="styles.css">
-    <title>Barangay Milagrosa || Inquiry Desk</title>
+    <title>Barangay Milagrosa | Community Desk</title>
 </head>
 
 <body>
     <a class="skip-link" href="#main-content">Skip to main content</a>
-    <header class="navbar" id="home">
+    <header class="navbar">
         <div class="header">
-            <a class="brand" href="#home" aria-label="Barangay Milagrosa Inquiry Desk home">
+            <a class="brand" href="index.html" aria-label="Barangay Milagrosa home">
                 <span class="brand-mark" aria-hidden="true">B</span>
                 <span>BARANGAY<br>MILAGROSA</span>
             </a>
             <nav aria-label="Main navigation">
                 <ul>
-                    <li><a href="#home" aria-current="page">Home</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#inquiry">Contact</a></li>
+                    <li><a href="index.html" aria-current="page">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="messages.html">Messages</a></li>
                 </ul>
             </nav>
-            <button class="theme-toggle" type="button" aria-pressed="false">Use dark mode</button>
+            <div class="header-actions">
+                <a class="account-link" href="login.html" data-account-link>Sign in</a>
+                <button class="theme-toggle" type="button" aria-label="Switch to dark theme" title="Switch theme">
+                    <span aria-hidden="true">☾</span>
+                </button>
+            </div>
         </div>
         <div class="background">
             <div class="hero-copy">
                 <p class="eyebrow">A helpful place for local residents</p>
                 <h1>Your community.<br>One place to ask.</h1>
                 <p>Find information about local services, community programs, and everyday concerns.</p>
-                <a class="button-link" href="#inquiry">Send an inquiry</a>
+                <a class="button-link" href="contact.html">Contact the inquiry desk</a>
             </div>
         </div>
     </header>
 
     <main id="main-content">
-        <section class="content" id="services" aria-labelledby="services-title">
+        <section class="content" aria-labelledby="services-title">
             <div class="menu-ctn">
                 <p class="eyebrow">How can we help?</p>
                 <h2 id="services-title">Community services</h2>
@@ -51,124 +56,44 @@
                         <span class="card-icon" aria-hidden="true">01</span>
                         <h3>Documents &amp; records</h3>
                         <p>Ask about local documents, certificates, and where to request them.</p>
-                        <a href="#inquiry">Ask about documents</a>
+                        <a href="services.html">Explore services</a>
                     </article>
                     <article class="thumb">
                         <span class="card-icon" aria-hidden="true">02</span>
                         <h3>Community concerns</h3>
                         <p>Share a neighborhood concern or ask which office can assist you.</p>
-                        <a href="#inquiry">Share a concern</a>
+                        <a href="messages.html">Start a conversation</a>
                     </article>
                     <article class="thumb">
                         <span class="card-icon" aria-hidden="true">03</span>
                         <h3>Programs &amp; services</h3>
                         <p>Find out where to ask about community programs and resident services.</p>
-                        <a href="#inquiry">Ask about services</a>
+                        <a href="contact.html">Contact the desk</a>
                     </article>
                 </div>
             </div>
         </section>
-
-        <section class="about" id="about" aria-labelledby="about-title">
+        <section class="about">
             <div class="about-ctn">
                 <img class="community-photo" src="./img/background.png"
                     alt="Aerial view of a local community and its surrounding roads">
                 <div class="about-right">
                     <p class="eyebrow">Here for our neighbors</p>
-                    <h2 id="about-title">Local information, made easier</h2>
-                    <p>This community inquiry desk is a simple starting point for residents looking for help. Tell us
-                        what you need, and we can guide you toward the appropriate local office or service.</p>
-                    <a class="button-link" href="#inquiry">Get in touch</a>
+                    <h2>Local information, made easier</h2>
+                    <p>This community inquiry desk is a simple starting point for residents looking for help. Learn
+                        about local services or sign in to have a private conversation with another user.</p>
+                    <a class="button-link" href="about.html">About the community desk</a>
                 </div>
-            </div>
-        </section>
-
-        <section class="visit" id="inquiry" aria-labelledby="inquiry-title">
-            <div class="visit-ctn">
-                <div class="visit-left">
-                    <p class="eyebrow">We are ready to listen</p>
-                    <h2 id="inquiry-title">Send an inquiry</h2>
-                    <p class="contact-note">Need in-person assistance? Visit your local community or municipal office
-                        during public hours. For emergencies, contact your local emergency service.</p>
-                    <p class="form-notice">This website preview does not send or store inquiries. Please contact your
-                        local office directly for assistance.</p>
-                </div>
-                <form class="inquiry-form">
-                    <div class="form-field">
-                        <label for="name">Your name</label>
-                        <input type="text" id="name" name="name" autocomplete="name" required>
-                    </div>
-                    <div class="form-field">
-                        <label for="email">Email address</label>
-                        <input type="email" id="email" name="email" autocomplete="email" required>
-                    </div>
-                    <div class="form-field">
-                        <label for="topic">What is your inquiry about?</label>
-                        <select id="topic" name="topic" required>
-                            <option value="" selected disabled>Select a topic</option>
-                            <option>Documents and records</option>
-                            <option>Community concern</option>
-                            <option>Programs and services</option>
-                            <option>Other</option>
-                        </select>
-                    </div>
-                    <div class="form-field">
-                        <label for="message">How can we help?</label>
-                        <textarea id="message" name="message" rows="5" required></textarea>
-                    </div>
-                    <button class="button-link submit-button" type="submit">Send inquiry</button>
-                    <p class="form-status" role="status" aria-live="polite"></p>
-                </form>
             </div>
         </section>
     </main>
-
     <footer>
-        <a class="footer-brand" href="#home">Community Inquiry Desk</a>
+        <a class="footer-brand" href="index.html">Barangay Milagrosa Community Desk</a>
         <p>Local information and assistance for residents.</p>
-        <a href="#inquiry">Contact the inquiry desk</a>
+        <a href="contact.html">Contact the inquiry desk</a>
     </footer>
-
-    <script>
-        const themeToggle = document.querySelector(".theme-toggle");
-        const root = document.documentElement;
-        const inquiryForm = document.querySelector(".inquiry-form");
-        const formStatus = document.querySelector(".form-status");
-        const systemPrefersDark = window.matchMedia("(prefers-color-scheme: dark)");
-        const savedTheme = localStorage.getItem("community-theme");
-
-        if (savedTheme === "light" || savedTheme === "dark") {
-            root.dataset.theme = savedTheme;
-        }
-
-        function updateThemeToggle() {
-            const isDark = root.dataset.theme
-                ? root.dataset.theme === "dark"
-                : systemPrefersDark.matches;
-
-            themeToggle.textContent = isDark ? "Use light mode" : "Use dark mode";
-            themeToggle.setAttribute("aria-pressed", String(isDark));
-        }
-
-        updateThemeToggle();
-
-        themeToggle.addEventListener("click", function () {
-            const isDark = root.dataset.theme
-                ? root.dataset.theme === "dark"
-                : systemPrefersDark.matches;
-            const nextTheme = isDark ? "light" : "dark";
-
-            root.dataset.theme = nextTheme;
-            localStorage.setItem("community-theme", nextTheme);
-            updateThemeToggle();
-        });
-
-        inquiryForm.addEventListener("submit", function (event) {
-            event.preventDefault();
-            formStatus.textContent =
-                "This preview does not send inquiries. Please contact your local office directly.";
-        });
-    </script>
+    <script src="theme.js"></script>
+    <script type="module" src="account-nav.js"></script>
 </body>
 
 </html>

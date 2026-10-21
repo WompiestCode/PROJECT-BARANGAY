@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#f5f3ee">
+    <meta name="description" content="Sign in or create an account to message other community desk users.">
+    <link rel="stylesheet" href="styles.css">
+    <title>Sign in | Barangay Milagrosa</title>
+</head>
+<body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <header class="page-header">
+        <div class="header">
+            <a class="brand" href="index.html" aria-label="Barangay Milagrosa home"><span class="brand-mark" aria-hidden="true">B</span><span>BARANGAY<br>MILAGROSA</span></a>
+            <nav aria-label="Main navigation"><ul>
+                <li><a href="index.html">Home</a></li><li><a href="services.html">Services</a></li>
+                <li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li>
+                <li><a href="messages.html">Messages</a></li>
+            </ul></nav>
+            <div class="header-actions"><a class="account-link" href="login.html" data-account-link>Sign in</a><button class="theme-toggle" type="button" aria-label="Switch to dark theme" title="Switch theme"><span aria-hidden="true">☾</span></button></div>
+        </div>
+    </header>
+    <main id="main-content" class="page-main">
+        <section class="page-intro"><p class="eyebrow">Private conversations</p><h1>Your community account</h1><p>Create an account or sign in to connect with other registered users.</p></section>
+        <section class="auth-panel" aria-labelledby="auth-title">
+            <h2 id="auth-title">Sign in</h2>
+            <div class="auth-tabs" role="group" aria-label="Account action">
+                <button class="button-link auth-tab" type="button" data-mode="signin" aria-pressed="true">Sign in</button>
+                <button class="button-link auth-tab secondary-button" type="button" data-mode="signup" aria-pressed="false">Create account</button>
+            </div>
+            <form class="auth-form" id="auth-form">
+                <div class="form-field" id="name-field" hidden>
+                    <label for="display-name">Your name</label>
+                    <input type="text" id="display-name" name="displayName" autocomplete="name" maxlength="60">
+                </div>
+                <div class="form-field">
+                    <label for="email">Email address</label>
+                    <input type="email" id="email" name="email" autocomplete="email" required>
+                </div>
+                <div class="form-field">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" autocomplete="current-password" minlength="6" required>
+                </div>
+                <button class="button-link submit-button" id="auth-submit" type="submit">Sign in</button>
+                <p class="form-status" id="auth-status" role="status" aria-live="polite"></p>
+            </form>
+            <p class="form-notice" id="firebase-notice" hidden>Connect a Firebase project to enable accounts. Follow the setup instructions in the project README.</p>
+        </section>
+    </main>
+    <footer><a class="footer-brand" href="index.html">Barangay Milagrosa Community Desk</a><p>Local information and assistance for residents.</p><a href="contact.html">Contact the inquiry desk</a></footer>
+    <script src="theme.js"></script>
+    <script type="module" src="login.js"></script>
+    <script type="module" src="account-nav.js"></script>
+</body>
+</html>
