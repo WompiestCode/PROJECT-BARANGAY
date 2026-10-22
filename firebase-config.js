@@ -3,10 +3,13 @@ import { getAuth } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-aut
 import { getFirestore } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-firestore.js";
 
 const firebaseConfig = {
-    apiKey: "YOUR_FIREBASE_API_KEY",
-    authDomain: "YOUR_PROJECT_ID.firebaseapp.com",
-    projectId: "YOUR_PROJECT_ID",
-    appId: "YOUR_FIREBASE_APP_ID"
+    apiKey: "AIzaSyAkFrnXBTyxoq_NlnjQ4W9puwNOFTjhk08",
+    authDomain: "project-barangay-4f81f.firebaseapp.com",
+    projectId: "project-barangay-4f81f",
+    storageBucket: "project-barangay-4f81f.firebasestorage.app",
+    messagingSenderId: "1014174557585",
+    appId: "1:1014174557585:web:b1a6a9cff3de3db3236630"
+
 };
 
 export const firebaseReady = !Object.values(firebaseConfig).some((value) => value.startsWith("YOUR_"));

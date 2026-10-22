@@ -1,36 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#f5f3ee">
-    <meta name="description" content="Contact the Barangay Milagrosa community inquiry desk.">
+    <meta name="description" content="Submit a Barangay Clearance request to the Barangay Milagrosa community desk.">
     <link rel="stylesheet" href="styles.css">
-    <title>Contact | Barangay Milagrosa</title>
+    <title>Request a document | Barangay Milagrosa</title>
 </head>
+
 <body>
     <a class="skip-link" href="#main-content">Skip to main content</a>
     <header class="page-header">
         <div class="header">
-            <a class="brand" href="index.html" aria-label="Barangay Milagrosa home"><span class="brand-mark" aria-hidden="true">B</span><span>BARANGAY<br>MILAGROSA</span></a>
-            <nav aria-label="Main navigation"><ul>
-                <li><a href="index.html">Home</a></li><li><a href="services.html">Services</a></li>
-                <li><a href="about.html">About</a></li><li><a href="contact.html" aria-current="page">Contact</a></li>
-                <li><a href="messages.html">Messages</a></li>
-            </ul></nav>
-            <div class="header-actions"><a class="account-link" href="login.html" data-account-link>Sign in</a><button class="theme-toggle" type="button" aria-label="Switch to dark theme" title="Switch theme"><span aria-hidden="true">☾</span></button></div>
+            <a class="brand" href="index.html" aria-label="Barangay Milagrosa home"><span class="brand-mark"
+                    aria-hidden="true">B</span><span>BARANGAY<br>MILAGROSA</span></a>
+            <nav aria-label="Main navigation">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html" aria-current="page">Contact</a></li>
+                    <li><a href="messages.html">Messages</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions"><a class="account-link" href="login.html" data-account-link>Sign in</a><button
+                    class="theme-toggle" type="button" aria-label="Switch to dark theme" title="Switch theme"><span
+                        aria-hidden="true">☾</span></button></div>
         </div>
     </header>
     <main id="main-content" class="page-main">
-        <section class="page-intro"><p class="eyebrow">We are ready to listen</p><h1>Contact the inquiry desk</h1><p>For emergencies, contact your local emergency service. This site is not monitored for emergency requests.</p></section>
-        <section class="visit" aria-labelledby="inquiry-title">
-            <div class="visit-ctn">
-                <div class="visit-left"><h2 id="inquiry-title">Send an inquiry</h2><p class="contact-note">Need in-person assistance? Visit your local community or municipal office during public hours.</p><p class="form-notice">Sign in to send a private message to another registered user and receive a reply.</p><a class="button-link" href="messages.html">Go to messages</a></div>
-                <div><p><strong>Looking for information?</strong></p><p>Browse <a href="services.html">community services</a> or read <a href="about.html">about the desk</a>.</p></div>
+        <section class="page-intro">
+            <p class="eyebrow">Document services</p>
+            <h1>Request a document</h1>
+            <p>Submit your details for a Barangay Clearance request. The barangay office will use this information to
+                process your request.</p>
+        </section>
+        <section class="visit" aria-labelledby="request-title">
+            <div class="visit-ctn request-layout">
+                <div>
+                    <p class="contact-note">Please provide your name, birthdate, and current address. Fields marked
+                        required must be completed.</p>
+                    <form class="inquiry-form request-form" id="document-request">
+                        <div class="form-field request-document-type">
+                            <label for="document-type">Document type <span aria-hidden="true">*</span></label>
+                            <select id="document-type" name="documentType" required>
+                                <option value="Barangay Clearance">Barangay Clearance</option>
+                                <option value="Marriage Certificate">Marriage Certificate</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-field">
+                            <label for="first-name">First name <span aria-hidden="true">*</span></label>
+                            <input id="first-name" name="firstName" type="text" autocomplete="given-name" maxlength="80"
+                                required>
+                        </div>
+                        <div class="form-field">
+                            <label for="last-name">Last name <span aria-hidden="true">*</span></label>
+                            <input id="last-name" name="lastName" type="text" autocomplete="family-name" maxlength="80"
+                                required>
+                        </div>
+                        <div class="form-field">
+                            <label for="middle-name">Middle name <span class="contact-note">(optional)</span></label>
+                            <input id="middle-name" name="middleName" type="text" autocomplete="additional-name"
+                                maxlength="80">
+                        </div>
+                        <div class="form-field">
+                            <label for="birthdate">Birthdate <span aria-hidden="true">*</span></label>
+                            <input id="birthdate" name="birthdate" type="date" required>
+                        </div>
+                        <div class="form-field request-address">
+                            <label for="address">Address <span aria-hidden="true">*</span></label>
+                            <textarea id="address" name="address" rows="3" maxlength="300" autocomplete="street-address"
+                                required></textarea>
+                        </div>
+                        <button class="button-link submit-button" id="request-submit" type="submit">Submit
+                            request</button>
+                        <p class="form-status request-status" id="request-status" role="status" aria-live="polite"></p>
+                    </form>
+                    <p class="form-notice">Your request details are visible only to designated administrators. Do not
+                        use this form for emergencies.</p>
+                </div>
             </div>
         </section>
     </main>
-    <footer><a class="footer-brand" href="index.html">Barangay Milagrosa Community Desk</a><p>Local information and assistance for residents.</p><a href="services.html">Browse services</a></footer>
-    <script src="theme.js"></script><script type="module" src="account-nav.js"></script>
+    <footer><a class="footer-brand" href="index.html">Barangay Milagrosa Community Desk</a>
+        <p>Local information and assistance for residents.</p><a href="services.html">Browse services</a>
+    </footer>
+    <script src="theme.js"></script>
+    <script type="module" src="document-requests.js"></script>
+    <script type="module" src="account-nav.js"></script>
 </body>
+
 </html>

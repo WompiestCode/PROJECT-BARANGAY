@@ -17,6 +17,8 @@ const status = document.querySelector("#auth-status");
 const modeButtons = document.querySelectorAll(".auth-tab");
 const firebaseNotice = document.querySelector("#firebase-notice");
 let mode = "signin";
+const returnToAdminRequests = new URLSearchParams(window.location.search).get("redirect") === "admin-requests.html";
+const postAuthPage = returnToAdminRequests ? "admin-requests.html" : "messages.html";
 
 if (!firebaseReady) {
     firebaseNotice.hidden = false;
@@ -26,7 +28,7 @@ if (!firebaseReady) {
 if (firebaseReady) {
     onAuthStateChanged(auth, (user) => {
         if (user && mode === "signin") {
-            window.location.replace("messages.html");
+            window.location.replace(postAuthPage);
         }
     });
 }
@@ -66,10 +68,10 @@ form.addEventListener("submit", async (event) => {
                 displayName,
                 createdAt: serverTimestamp()
             });
-            window.location.assign("messages.html");
+            window.location.assign(postAuthPage);
         } else {
             await signInWithEmailAndPassword(auth, email, password);
-            window.location.assign("messages.html");
+            window.location.assign(postAuthPage);
         }
     } catch (error) {
         status.textContent = `Could not ${mode === "signup" ? "create the account" : "sign in"}: ${error.message}`;
