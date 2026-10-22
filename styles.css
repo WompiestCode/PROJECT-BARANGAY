@@ -390,6 +390,10 @@ textarea:focus-visible {
     box-shadow: var(--shadow);
 }
 
+.request-layout {
+    grid-template-columns: minmax(0, 1fr);
+}
+
 .contact-note,
 .form-notice {
     color: var(--muted);
@@ -405,6 +409,65 @@ textarea:focus-visible {
 .inquiry-form {
     display: grid;
     gap: 16px;
+}
+
+.request-form {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    margin-top: 24px;
+}
+
+.request-address,
+.request-form .submit-button,
+.request-status {
+    grid-column: 1 / -1;
+}
+
+.request-status:empty {
+    display: none;
+}
+
+.request-list {
+    display: grid;
+    width: min(900px, calc(100% - 48px));
+    gap: 16px;
+    margin: 0 auto 48px;
+    padding: 0;
+    list-style: none;
+}
+
+.request-card {
+    padding: 24px;
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    background-color: var(--surface);
+    box-shadow: var(--shadow);
+}
+
+.request-card h2 {
+    margin: 0;
+    font-size: 22px;
+}
+
+.request-card p {
+    margin: 6px 0 0;
+    color: var(--muted);
+}
+
+.request-card dl {
+    display: grid;
+    grid-template-columns: max-content minmax(0, 1fr);
+    gap: 6px 16px;
+    margin: 16px 0 0;
+}
+
+.request-card dt {
+    font-weight: 700;
+}
+
+.request-card dd {
+    min-width: 0;
+    margin: 0;
+    overflow-wrap: anywhere;
 }
 
 .form-field {
@@ -756,6 +819,33 @@ footer p {
     .visit-ctn {
         gap: 24px;
         padding: 22px;
+    }
+
+    .request-form {
+        grid-template-columns: 1fr;
+    }
+
+    .request-address,
+    .request-form .submit-button,
+    .request-status {
+        grid-column: auto;
+    }
+
+    .request-list {
+        width: calc(100% - 32px);
+    }
+
+    .request-card {
+        padding: 18px;
+    }
+
+    .request-card dl {
+        grid-template-columns: 1fr;
+        gap: 2px;
+    }
+
+    .request-card dd + dt {
+        margin-top: 8px;
     }
 
     .auth-panel {

@@ -11,6 +11,10 @@ service cloud.firestore {
         && request.auth.uid in get(/databases/$(database)/documents/conversations/$(conversationId)).data.participants;
     }
 
+    function isAdmin() {
+      return isSignedIn() && request.auth.token.admin == true;
+    }
+
     match /publicProfiles/{userId} {
       allow read: if isSignedIn();
       allow create: if isSignedIn()
@@ -62,6 +66,32 @@ service cloud.firestore {
           && request.resource.data.createdAt == request.time;
         allow update, delete: if false;
       }
+    }
+
+    match /documentRequests/{requestId} {
+      allow create: if request.resource.data.keys().hasAll([
+          'documentType', 'firstName', 'lastName', 'middleName', 'birthdate', 'address', 'createdAt'
+        ])
+        && request.resource.data.keys().hasOnly([
+          'documentType', 'firstName', 'lastName', 'middleName', 'birthdate', 'address', 'createdAt'
+        ])
+        && request.resource.data.documentType == 'Barangay Clearance'
+        && request.resource.data.firstName is string
+        && request.resource.data.firstName.size() > 0
+        && request.resource.data.firstName.size() <= 80
+        && request.resource.data.lastName is string
+        && request.resource.data.lastName.size() > 0
+        && request.resource.data.lastName.size() <= 80
+        && request.resource.data.middleName is string
+        && request.resource.data.middleName.size() <= 80
+        && request.resource.data.birthdate is string
+        && request.resource.data.birthdate.matches('^[0-9]{4}-[0-9]{2}-[0-9]{2}$')
+        && request.resource.data.address is string
+        && request.resource.data.address.size() > 0
+        && request.resource.data.address.size() <= 300
+        && request.resource.data.createdAt == request.time;
+      allow read: if isAdmin();
+      allow update, delete: if false;
     }
   }
 }
